@@ -14,7 +14,7 @@ int main(){
     printf("task 2\n");
     scanf("%d %d", &a, &b);
     for (n=a; (n%a!=0) || (n%b!=0); n++);
-    print("LCM for nums %d %d is %d\n", a, b, n);
+    printf("LCM for nums %d %d is %d\n", a, b, n);
 
     printf("task 3\n");
     scanf("%d", &a);
