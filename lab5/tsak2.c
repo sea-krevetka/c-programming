@@ -8,7 +8,7 @@ bool isPrimary(int m){
         if (m%i==0){
             cnt++;
             //printf("%d", m);
-        }
+        } //проверка на количество делителей у числа, если cnt==0, то числа простое
     }
     if (cnt==0){
         return true;
@@ -22,10 +22,10 @@ void print_arr(int n, int array[n]){
     int summ=0;
     printf("[");
     for (int i=0; i<n; i++){
-        printf("%d ", array[i]);
-        summ=summ+array[i];
+        printf("%d ", array[i]); //вывод элементов массива
+        summ=summ+array[i]; //сумма элементов массива
         if (isPrimary(array[i])==true){
-            lecnt++;}
+            lecnt++;} // запуск функции на проверку простого числа
     }
     printf("]\n");
     printf("Количество простых чисел: %d \n", lecnt);
@@ -38,7 +38,7 @@ void print_arr(int n, int array[n]){
 
 
 int main(){
-    isPrimary(5);
+    //isPrimary(5);
 
     int n;
     printf("Введите размер массива: ");
@@ -46,18 +46,18 @@ int main(){
     
     int m=n/2;
     int X[n];
-    int Y[(n/2)];
+    int Y[(n/2)]; //размер второго массива
     
-    printf("Введите элементы массива: ");
+    printf("Введите элементы массива: "); //через enter каждый
     int q=0;
     for (int i=0; i<n; i++){
         scanf("%d", &q);
-        X[i]=q;
+        X[i]=q; //запись введеных чисел в массив
     }
     print_arr(n, X);
     
     int f=0;
-    for (int i=1; i<sizeof(X)/4; i+=2){
+    for (int i=1; i<sizeof(X)/4; i+=2){ //запись элементов с шагом 2 - каждый второй элемент
         Y[f]=X[i];
         f++;
     }
