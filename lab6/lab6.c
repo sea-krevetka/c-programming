@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void main() {
+int main() {
     char s[256];
     fgets(s,256,stdin);
 
