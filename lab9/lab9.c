@@ -75,8 +75,28 @@ void printMatrix(int matrix[MAX_SIZE][MAX_SIZE], int N) {
 
 int main() {
     int N;
+    
     printf("Type size of matrix: ");
-    scanf("%d", &N);
+    //scanf("%d", &N);
+    
+    int flaginput=0;
+    while (flaginput == 0) {
+        if (scanf("%d", &N) != 1) {
+            printf("Invalid input.\n");
+            printf("Type size of matrix: ");
+            while (getchar() != '\n'); // Очистка буфера
+            continue;
+        }
+
+        if (N > 0 && N <= MAX_SIZE) {
+            flaginput = 1; 
+        } else {
+            printf("Number is not in valid range.\n");
+            printf("Type size of matrix: ");
+        }
+    }
+
+
 
     if (N < 1 || N > MAX_SIZE) {
         printf("Invalid matrix size.\n");
