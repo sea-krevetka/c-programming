@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.10)
+
+project(lib_test)
+
+set(LIBRARY_SRC ../pon.c)
+
+include_directories("include/" "./")
+
+add_executable(app ../lab4.c)
+
+if (BUILD_STATIC)
+    message("Build static")
+    add_library(pon STATIC ${LIBRARY_SRC})
+    target_link_libraries(app pon)
+else ()
+    message("Build shared")
+    add_library(pon SHARED ${LIBRARY_SRC})
+    target_link_libraries(app pon)
+endif()

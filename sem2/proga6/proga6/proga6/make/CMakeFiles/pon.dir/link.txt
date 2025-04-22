@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpon.a CMakeFiles/pon.dir/mnt/c/Users/i20/Desktop/vs/proga6/proga6/pon.c.o
+/usr/bin/ranlib libpon.a
